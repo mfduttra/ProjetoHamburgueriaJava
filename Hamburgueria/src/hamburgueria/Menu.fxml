@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="hamburgueria.MenuController">
+  <children>
+    <Button layoutX="273.0" layoutY="213.0" mnemonicParsing="false" onAction="#trocarTelaVoltar" text="Voltar" />
+    <Label layoutX="261.0" layoutY="113.0" text="MENU">
+      <font>
+        <Font size="26.0" fx:id="x1" />
+      </font>
+    </Label>
+    <Button layoutX="457.0" layoutY="173.0" mnemonicParsing="false" onAction="#trocarTelaPratos" text="Pratos" />
+    <Button layoutX="360.0" layoutY="173.0" mnemonicParsing="false" onAction="#trocarTelaReceitas" text="Receitas" />
+    <Button layoutX="49.0" layoutY="173.0" mnemonicParsing="false" onAction="#trocarTelaEstoque" text="Estoque" />
+    <Button layoutX="268.0" layoutY="173.0" mnemonicParsing="false" onAction="#trocarTelaOfertas" text="Ofertas" />
+    <Button layoutX="141.0" layoutY="173.0" mnemonicParsing="false" onAction="#trocarTelaForn" text="Fornecedores" />
+    <Label font="$x1" layoutX="193.0" layoutY="22.0" text="HAMBURGUERIA" textAlignment="LEFT" wrapText="false" />
+    <Label layoutX="144.0" layoutY="55.0" text="Caixa e Controle de Estoque" textAlignment="LEFT" wrapText="false">
+      <font>
+        <Font size="22.0" />
+      </font>
+    </Label>
+    <Label layoutX="216.0" layoutY="370.0" text="LPOO1 - Mellanie F. Dutra" />
+    <Label layoutX="14.0" layoutY="252.0" text="Ordem sugerida para navegaçao:" />
+    <Label layoutX="14.0" layoutY="268.0" text="1) Cadastre ingredientes em ESTOQUE" />
+    <Label layoutX="15.0" layoutY="284.0" text="2) Cadastre um fornecedor em FORNECEDORES" />
+    <Label layoutX="14.0" layoutY="300.0" text="3) Cadastre uma oferta a um fornecedor em OFERTAS" />
+    <Label layoutX="14.0" layoutY="316.0" text="4) Cadastre uma nova receita para um tipo de prato em RECEITAS" />
+    <Label layoutX="14.0" layoutY="332.0" text="5) Cadastre uma nova opçao com um conjunto de pratos PRATOS" />
+  </children>
+</AnchorPane>

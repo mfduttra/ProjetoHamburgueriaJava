@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="426.0" prefWidth="605.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="hamburgueria.FXMLDocumentController">
+  <children>
+    <ComboBox fx:id="opcoes" layoutX="348.0" layoutY="43.0" prefWidth="81.9998779296875" promptText="Opções">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+    <TextField fx:id="nomePrato" layoutX="311.0" layoutY="96.0" prefWidth="165.0" promptText="Insira o nome do prato" />
+    <Label layoutX="342.0" layoutY="78.0" text="Nome do prato" />
+    <Button fx:id="Adicionar" layoutX="349.0" layoutY="127.0" mnemonicParsing="false" onAction="#adicionarPrato" text="Adicionar" />
+    <TableView layoutX="40.0" layoutY="160.0" prefHeight="200.0" prefWidth="456.0">
+      <columns>
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="82.0" text="ID" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="376.0" text="Prato" />
+      </columns>
+    </TableView>
+    <Button layoutX="519.0" layoutY="185.0" mnemonicParsing="false" text="Editar" />
+    <Button layoutX="509.0" layoutY="220.0" mnemonicParsing="false" text="Remover" />
+    <Label layoutX="333.0" layoutY="16.0" text="Escolha seu prato" />
+    <Button layoutX="144.0" layoutY="107.0" mnemonicParsing="false" text="Voltar" />
+    <Label layoutX="72.0" layoutY="14.0" text="MENU" />
+    <Button layoutX="26.0" layoutY="44.0" mnemonicParsing="false" text="Pratos" />
+    <Button layoutX="127.0" layoutY="44.0" mnemonicParsing="false" text="Receitas" />
+    <Button layoutX="26.0" layoutY="76.0" mnemonicParsing="false" text="Estoque" />
+    <Button layoutX="135.0" layoutY="76.0" mnemonicParsing="false" text="Ofertas" />
+    <Button layoutX="26.0" layoutY="107.0" mnemonicParsing="false" text="Fornecedores" />
+  </children>
+</AnchorPane>

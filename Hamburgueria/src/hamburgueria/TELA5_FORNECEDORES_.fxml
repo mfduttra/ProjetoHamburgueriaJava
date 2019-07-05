@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="619.0" prefWidth="762.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="hamburgueria.TELA5_FORNECEDORES_Controller">
+  <children>
+    <TextField id="nomePrato" fx:id="nomeFornecedor" layoutX="403.0" layoutY="40.0" prefWidth="165.0" promptText="Digite o nome" />
+    <Button id="Adicionar" fx:id="adicionarFornecedor" layoutX="423.0" layoutY="74.0" mnemonicParsing="false" onAction="#adicionarFornecedor" text="Add Fornecedor" />
+    <TableView fx:id="fornecedoresTable" layoutX="29.0" layoutY="402.0" prefHeight="210.0" prefWidth="555.0">
+      <columns>
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="82.0" text="ID" fx:id="idFor" />
+        <TableColumn maxWidth="5000.0" minWidth="0.0" prefWidth="130.0" text="Fornecedor" fx:id="nomeForn" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="176.0" text="Ingrediente" fx:id="ingrFor" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="170.0" text="Valor" fx:id="valorForn" />
+      </columns>
+    </TableView>
+    <Button fx:id="editarFornecedor" layoutX="641.0" layoutY="468.0" mnemonicParsing="false" onAction="#editarFornecedor" text="Editar" />
+    <Button id="removerFornecedor" fx:id="removerOferta" layoutX="608.0" layoutY="526.0" mnemonicParsing="false" onAction="#removerOferta" text="Remover Oferta" />
+    <Button layoutX="135.0" layoutY="120.0" mnemonicParsing="false" onAction="#trocarTelaVoltar" text="Voltar" />
+    <Label layoutX="89.0" layoutY="27.0" text="MENU" />
+    <Button layoutX="17.0" layoutY="57.0" mnemonicParsing="false" onAction="#trocarTelaPratos" text="Pratos" />
+    <Button layoutX="118.0" layoutY="57.0" mnemonicParsing="false" onAction="#trocarTelaReceitas" text="Receitas" />
+    <Button layoutX="17.0" layoutY="89.0" mnemonicParsing="false" onAction="#trocarTelaEstoque" text="Estoque" />
+    <Button layoutX="126.0" layoutY="89.0" mnemonicParsing="false" onAction="#trocarTelaOfertas" text="Ofertas" />
+    <Button layoutX="17.0" layoutY="120.0" mnemonicParsing="false" onAction="#trocarTelaForn" text="Fornecedores" />
+    <Button fx:id="atualizarFornecedor" layoutX="631.0" layoutY="497.0" mnemonicParsing="false" onAction="#atualizarFornecedor" text="Atualizar" />
+    <Label layoutX="411.0" layoutY="16.0" text="1) Insira o Fornecedor" />
+    <Label layoutX="387.0" layoutY="118.0" text="LISTA DE OFERTAS CADASTRADAS" />
+    <TableView fx:id="ofertasTable" layoutX="266.0" layoutY="140.0" prefHeight="210.0" prefWidth="451.0">
+      <columns>
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="47.0" text="ID" fx:id="idOfertas" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="263.0" text="Ingrediente" fx:id="ingrOfertas" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="193.0" text="Valor" fx:id="valorOfertas" />
+      </columns>
+    </TableView>
+    <Button layoutX="625.0" layoutY="362.0" mnemonicParsing="false" onAction="#adicionarOferta" text="Add Oferta" />
+    <TextField fx:id="idFornecedor" layoutX="577.0" layoutY="40.0" prefWidth="22.0" visible="false" />
+    <Button id="removerFornecedor" fx:id="removerForn" layoutX="614.0" layoutY="557.0" mnemonicParsing="false" onAction="#removerForn" text="Remover Forn" />
+    <Label layoutX="266.0" layoutY="364.0" text="2) Selecione o ingrediente acima e apos &quot;Add Oferta&quot;" />
+    <Label layoutX="595.0" layoutY="423.0" text="3) Selecione, ao lado" />
+    <Label layoutX="597.0" layoutY="439.0" text="para as açoes abaixo:" />
+  </children>
+</AnchorPane>

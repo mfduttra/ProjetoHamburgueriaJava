@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="705.0" prefWidth="644.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="hamburgueria.TELA2_RECEITAS_Controller">
+  <children>
+    <Button id="Adicionar" layoutX="80.0" layoutY="306.0" mnemonicParsing="false" onAction="#adicionarPrato" text="Add Prato" />
+    <TableView fx:id="listaPratos" layoutX="14.0" layoutY="414.0" prefHeight="266.0" prefWidth="259.0">
+      <columns>
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="30.0" text="ID" fx:id="idpratoCol" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="126.0" text="Prato" fx:id="nomePratoCol" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="131.0" text="Tipo" fx:id="tipoPratoCol" />
+      </columns>
+    </TableView>
+    <Button fx:id="editarPrato" layoutX="518.0" layoutY="513.0" mnemonicParsing="false" onAction="#editarPrato" text="Editar" />
+    <Label layoutX="343.0" layoutY="19.0" text="Ingredientes no Estoque" />
+    <Button fx:id="atualizarPrato" layoutX="509.0" layoutY="541.0" mnemonicParsing="false" onAction="#atualizarPrato" text="Atualizar" />
+    <TableView fx:id="tabelaingr" layoutX="273.0" layoutY="41.0" prefHeight="266.0" prefWidth="299.0">
+      <columns>
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="43.0" text="ID" fx:id="idColIngr" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="153.0" text="Ingredientes" fx:id="IngrColIngr" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="111.0" text="Quantidade" fx:id="qtdadeColIngr" />
+      </columns>
+    </TableView>
+    <Button id="Adicionar" layoutX="452.0" layoutY="351.0" mnemonicParsing="false" onAction="#adicionarIngrAoPrato" text="Add Ingrediente" />
+    <Label layoutX="31.0" layoutY="174.0" text="1) Insira o nome do prato:" />
+    <TextField fx:id="nome" layoutX="18.0" layoutY="199.0" prefWidth="200.0" promptText="Digite o nome" />
+    <Button layoutX="140.0" layoutY="112.0" mnemonicParsing="false" onAction="#trocarTelaVoltar" text="Voltar" />
+    <Label layoutX="94.0" layoutY="19.0" text="MENU" />
+    <Button layoutX="22.0" layoutY="49.0" mnemonicParsing="false" onAction="#trocarTelaPratos" text="Pratos" />
+    <Button layoutX="123.0" layoutY="49.0" mnemonicParsing="false" onAction="#trocarTelaReceitas" text="Receitas" />
+    <Button layoutX="22.0" layoutY="81.0" mnemonicParsing="false" onAction="#trocarTelaEstoque" text="Estoque" />
+    <Button layoutX="131.0" layoutY="81.0" mnemonicParsing="false" onAction="#trocarTelaOfertas" text="Ofertas" />
+    <Button layoutX="22.0" layoutY="112.0" mnemonicParsing="false" onAction="#trocarTelaForn" text="Fornecedores" />
+    <ListView fx:id="listaingr" layoutX="286.0" layoutY="444.0" prefHeight="236.0" prefWidth="183.0" />
+    <Label layoutX="325.0" layoutY="417.0" text="Ingredientes" />
+    <ComboBox fx:id="pratosDisponiveis" layoutX="37.0" layoutY="251.0" prefWidth="172.0" promptText="Pratos Disponiveis">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+    <TextField fx:id="quantidade" layoutX="373.0" layoutY="351.0" prefWidth="63.0" />
+    <Label layoutX="280.0" layoutY="353.0" prefWidth="86.0" text="Quantidade:" />
+    <Label layoutX="58.0" layoutY="228.0" text="2) Selecione o tipo: " />
+    <Label layoutX="37.0" layoutY="284.0" text="3) Clique em &quot;Add Prato&quot;: " />
+    <Label layoutX="280.0" layoutY="313.0" text="4) Selecione o Ingrediente na tabela acima: " />
+    <Label layoutX="280.0" layoutY="329.0" text="5) Digite a quantidade e &quot;Add Ingrediente&quot; " />
+    <Label layoutX="480.0" layoutY="464.0" text="6) Selecione, ao lado" />
+    <Label layoutX="482.0" layoutY="480.0" text="para as açoes abaixo:" />
+  </children>
+</AnchorPane>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="610.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="hamburgueria.TELA3_ESTOQUE_Controller">
+  <children>
+    <TextField id="nomePrato" fx:id="nomeIngr" layoutX="310.0" layoutY="57.0" prefWidth="165.0" promptText="Digite o nome" />
+    <Button id="Adicionar" fx:id="addPrato" layoutX="344.0" layoutY="135.0" mnemonicParsing="false" onAction="#adicionarPrato" text="Adicionar" />
+    <TableView id="IngrTable" fx:id="ingrTable" layoutX="31.0" layoutY="173.0" prefHeight="200.0" prefWidth="414.0">
+      <columns>
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="82.0" text="ID" fx:id="idCol" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="217.0" text="Ingredientes" fx:id="ingredientesCol" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="111.0" text="Quantidade" fx:id="quantidadeCol" />
+      </columns>
+    </TableView>
+    <Button fx:id="editarPrato" layoutX="493.0" layoutY="238.0" mnemonicParsing="false" onAction="#editarPrato" text="Editar" />
+    <Button fx:id="removerPrato" layoutX="483.0" layoutY="273.0" mnemonicParsing="false" onAction="#removerPrato" text="Remover" />
+    <Label layoutX="320.0" layoutY="33.0" text="1) Insira o Ingrediente" />
+    <Button fx:id="atualizarPrato" layoutX="486.0" layoutY="308.0" mnemonicParsing="false" onAction="#atualizarPrato" text="Atualizar" />
+    <Label layoutX="316.0" layoutY="90.0" prefWidth="154.0" text="2) Insira a quantidade" />
+    <TextField id="nomePrato" fx:id="qtdadeIngr" layoutX="310.0" layoutY="109.0" prefWidth="165.0" promptText="Digite as unidades" />
+    <TextField fx:id="idIngr" layoutX="481.0" layoutY="57.0" prefWidth="39.0" visible="false" />
+    <Button layoutX="132.0" layoutY="110.0" mnemonicParsing="false" onAction="#trocarTelaVoltar" text="Voltar" />
+    <Label layoutX="86.0" layoutY="17.0" text="MENU" />
+    <Button layoutX="14.0" layoutY="47.0" mnemonicParsing="false" onAction="#trocarTelaPratos" text="Pratos" />
+    <Button layoutX="115.0" layoutY="47.0" mnemonicParsing="false" onAction="#trocarTelaReceitas" text="Receitas" />
+    <Button layoutX="14.0" layoutY="79.0" mnemonicParsing="false" onAction="#trocarTelaEstoque" text="Estoque" />
+    <Button layoutX="123.0" layoutY="79.0" mnemonicParsing="false" onAction="#trocarTelaOfertas" text="Ofertas" />
+    <Button layoutX="14.0" layoutY="110.0" mnemonicParsing="false" onAction="#trocarTelaForn" text="Fornecedores" />
+    <Label layoutX="455.0" layoutY="192.0" text="6) Selecione, ao lado" />
+    <Label layoutX="457.0" layoutY="208.0" text="para as açoes abaixo:" />
+  </children>
+</AnchorPane>

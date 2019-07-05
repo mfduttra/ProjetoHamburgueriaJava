@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Hamburgueria">
+  <ClassDiagramComponents>
+    <Class name="ResultadoPratos" package="Result" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="id" type="int" visibility="private"/>
+        <Field name="nome" type="String" visibility="private"/>
+        <Field name="tipo" type="String" visibility="private"/>
+        <Field name="r" type="Receita" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="id"/>
+          <Argument type="String" name="nome"/>
+          <Argument type="String" name="tipo"/>
+          <Argument type="Receita" name="r"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getR" returnType="Receita" visibility="public"/>
+        <Method name="setR" returnType="void" visibility="public">
+          <Argument type="Receita" name="r"/>
+        </Method>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getNome" returnType="String" visibility="public"/>
+        <Method name="setNome" returnType="void" visibility="public">
+          <Argument type="String" name="nome"/>
+        </Method>
+        <Method name="getTipo" returnType="String" visibility="public"/>
+        <Method name="setTipo" returnType="void" visibility="public">
+          <Argument type="String" name="tipo"/>
+        </Method>
+        <Method name="getAll" returnType="List&lt;ResultadoPratos&gt;" visibility="public" isStatic="true"/>
+        <Method name="getAllIngredientes" returnType="List&lt;Ingrediente&gt;" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="IngredientesxPratos" package="Result" visibility="public" xPosition="457.0" yPosition="20.0">
+      <Fields>
+        <Field name="ingrediente" type="Ingrediente" visibility="private"/>
+        <Field name="receita" type="Receita" visibility="private"/>
+        <Field name="quantidade" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getIngrediente" returnType="Ingrediente" visibility="public"/>
+        <Method name="setIngrediente" returnType="void" visibility="public">
+          <Argument type="Ingrediente" name="ingrediente"/>
+        </Method>
+        <Method name="getReceita" returnType="Receita" visibility="public"/>
+        <Method name="setReceita" returnType="void" visibility="public">
+          <Argument type="Receita" name="receita"/>
+        </Method>
+        <Method name="getQuantidade" returnType="int" visibility="public"/>
+        <Method name="setQuantidade" returnType="void" visibility="public">
+          <Argument type="int" name="quantidade"/>
+        </Method>
+        <Method name="insert" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ResultadoIngrxOferta" package="Result" visibility="public" xPosition="794.0" yPosition="20.0">
+      <Fields>
+        <Field name="forn" type="Fornecedor" visibility="private"/>
+        <Field name="ingr" type="Ingrediente" visibility="private"/>
+        <Field name="ofta" type="Oferta" visibility="private"/>
+        <Field name="id" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Fornecedor" name="forn"/>
+          <Argument type="Ingrediente" name="ingr"/>
+          <Argument type="Oferta" name="ofta"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getForn" returnType="Fornecedor" visibility="public"/>
+        <Method name="setForn" returnType="void" visibility="public">
+          <Argument type="Fornecedor" name="forn"/>
+        </Method>
+        <Method name="getIngr" returnType="Ingrediente" visibility="public"/>
+        <Method name="setIngr" returnType="void" visibility="public">
+          <Argument type="Ingrediente" name="ingr"/>
+        </Method>
+        <Method name="getOfta" returnType="Oferta" visibility="public"/>
+        <Method name="setOfta" returnType="void" visibility="public">
+          <Argument type="Oferta" name="ofta"/>
+        </Method>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getAll" returnType="List&lt;ResultadoIngrxOferta&gt;" visibility="public" isStatic="true"/>
+      </Methods>
+    </Class>
+    <Class name="PratosXPedidos" package="Result" visibility="public" xPosition="1287.0" yPosition="284.0">
+      <Fields>
+        <Field name="ped" type="Pedido" visibility="private"/>
+        <Field name="pra" type="Prato" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Pedido" name="ped"/>
+          <Argument type="Prato" name="pra"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getPed" returnType="Pedido" visibility="public"/>
+        <Method name="setPed" returnType="void" visibility="public">
+          <Argument type="Pedido" name="ped"/>
+        </Method>
+        <Method name="getPra" returnType="Prato" visibility="public"/>
+        <Method name="setPra" returnType="void" visibility="public">
+          <Argument type="Prato" name="pra"/>
+        </Method>
+        <Method name="insert" returnType="void" visibility="public"/>
+        <Method name="remove" returnType="boolean" visibility="public"/>
+        <Method name="removeByID" returnType="boolean" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Conexao" package="hamburgueria" visibility="public" xPosition="1287.0" yPosition="20.0">
+      <Fields>
+        <Field name="usuario" type="String" visibility="private"/>
+        <Field name="senha" type="String" visibility="private"/>
+        <Field name="servidor" type="String" visibility="private"/>
+        <Field name="porta" type="int" visibility="private"/>
+        <Field name="conexao" type="Connection" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="usuario"/>
+          <Argument type="String" name="senha"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getConexao" returnType="Connection" visibility="public"/>
+        <Method name="desconecta" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Estoque" package="hamburgueria" visibility="public" xPosition="1591.0" yPosition="20.0">
+      <Fields>
+        <Field name="estocavel" type="List&lt;Estoque&gt;" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getEstocavel" returnType="List&lt;Estoque&gt;" visibility="public"/>
+        <Method name="setEstocavel" returnType="void" visibility="public">
+          <Argument type="List&lt;Estoque&gt;" name="estocavel"/>
+        </Method>
+        <Method name="fazerInventario" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Hamburgueria" package="hamburgueria" visibility="public" xPosition="1611.0" yPosition="224.0">
+      <Fields>
+        <Field name="st" type="Stage" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="trocarTela" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="caminho"/>
+        </Method>
+        <Method name="start" returnType="void" visibility="public">
+          <Argument type="Stage" name="stage"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Hamburguer" package="Model" visibility="public" xPosition="1663.0" yPosition="1029.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="preparar" returnType="void" visibility="public"/>
+        <Method name="insert" returnType="/** Método para inserir     * @return void */ void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Acompanhamento" package="Model" visibility="public" xPosition="1198.0" yPosition="662.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="preparar" returnType="void" visibility="public"/>
+        <Method name="insert" returnType="/** Método para inserir     * @return void */ void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Oferta" package="Model" visibility="public" xPosition="-147.0" yPosition="416.0">
+      <Fields>
+        <Field name="id" type="int" visibility="private"/>
+        <Field name="ingrediente" type="Ingrediente" visibility="private"/>
+        <Field name="preco" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="id"/>
+          <Argument type="Ingrediente" name="ingrediente"/>
+          <Argument type="double" name="preco"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getIngrediente" returnType="Ingrediente" visibility="public"/>
+        <Method name="setIngrediente" returnType="void" visibility="public">
+          <Argument type="Ingrediente" name="ingrediente"/>
+        </Method>
+        <Method name="getPreco" returnType="double" visibility="public"/>
+        <Method name="setPreco" returnType="void" visibility="public">
+          <Argument type="double" name="preco"/>
+        </Method>
+        <Method name="insert" returnType="boolean" visibility="public"/>
+        <Method name="getAll" returnType="List&lt;Oferta&gt;" visibility="public" isStatic="true"/>
+        <Method name="update" returnType="boolean" visibility="public"/>
+        <Method name="remove" returnType="boolean" visibility="public"/>
+        <Method name="updateFornecedor" returnType="boolean" visibility="public">
+          <Argument type="int" name="fornecedor"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="removeByFornecedor" returnType="void" visibility="public" isStatic="true">
+          <Argument type="Fornecedor" name="f"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Milkshake" package="Model" visibility="public" xPosition="1505.0" yPosition="1178.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="preparar" returnType="void" visibility="public"/>
+        <Method name="insert" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Cardapio" package="Model" visibility="public" xPosition="1337.0" yPosition="1617.0">
+      <Fields>
+        <Field name="opcoes" type="List&lt;Opcao&gt;" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getOpcoes" returnType="List&lt;Opcao&gt;" visibility="public"/>
+        <Method name="setOpcoes" returnType="void" visibility="public">
+          <Argument type="List&lt;Opcao&gt;" name="opcoes"/>
+        </Method>
+        <Method name="fazerPedido" returnType="Pedido" visibility="public">
+          <Argument type="List&lt;Opcao&gt;" name="opcoes"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Fornecedor" package="Model" visibility="public" xPosition="770.0" yPosition="760.0">
+      <Fields>
+        <Field name="ofertas" type="List&lt;Oferta&gt;" visibility="private"/>
+        <Field name="nome" type="String" visibility="private"/>
+        <Field name="id" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="nome"/>
+          <Argument type="int" name="id"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getOfertas" returnType="List&lt;Oferta&gt;" visibility="public"/>
+        <Method name="setOfertas" returnType="void" visibility="public">
+          <Argument type="List&lt;Oferta&gt;" name="ofertas"/>
+        </Method>
+        <Method name="getNome" returnType="String" visibility="public"/>
+        <Method name="setNome" returnType="void" visibility="public">
+          <Argument type="String" name="nome"/>
+        </Method>
+        <Method name="insert" returnType="boolean" visibility="public"/>
+        <Method name="getAll" returnType="List&lt;Fornecedor&gt;" visibility="public" isStatic="true"/>
+        <Method name="update" returnType="boolean" visibility="public"/>
+        <Method name="remove" returnType="boolean" visibility="public"/>
+        <Method name="getOfertasFromFornecedor" returnType="List&lt;Oferta&gt;" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="PratoCozinhavel" package="Model" visibility="public" isAbstract="true" xPosition="1333.0" yPosition="918.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Cerveja" package="Model" visibility="public" xPosition="1933.0" yPosition="241.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="insert" returnType="/** Método para inserir     * @return void */ void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Pedido" package="Model" visibility="public" xPosition="1763.0" yPosition="650.0">
+      <Fields>
+        <Field name="pratos" type="List&lt;Prato&gt;" visibility="private"/>
+        <Field name="observacao" type="String" visibility="private"/>
+        <Field name="id" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="observacao"/>
+          <Argument type="int" name="id"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getPratos" returnType="List&lt;Prato&gt;" visibility="public"/>
+        <Method name="setPratos" returnType="void" visibility="public">
+          <Argument type="List&lt;Prato&gt;" name="pratos"/>
+        </Method>
+        <Method name="getObservacao" returnType="String" visibility="public"/>
+        <Method name="setObservacao" returnType="void" visibility="public">
+          <Argument type="String" name="observacao"/>
+        </Method>
+        <Method name="insert" returnType="boolean" visibility="public"/>
+        <Method name="getAll" returnType="List&lt;Pedido&gt;" visibility="public" isStatic="true"/>
+        <Method name="getPratosByID" returnType="List&lt;Prato&gt;" visibility="public"/>
+        <Method name="remove" returnType="boolean" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="PratoEstocavel" package="Model" visibility="public" isAbstract="true" xPosition="2079.0" yPosition="400.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Receita" package="Model" visibility="public" xPosition="246.0" yPosition="1166.0">
+      <Fields>
+        <Field name="receitas" type="List&lt;Ingrediente&gt;" visibility="private"/>
+        <Field name="nome" type="String" visibility="private"/>
+        <Field name="id" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nome"/>
+          <Argument type="int" name="id"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getNome" returnType="String" visibility="public"/>
+        <Method name="setNome" returnType="void" visibility="public">
+          <Argument type="String" name="nome"/>
+        </Method>
+        <Method name="getIngredientes" returnType="List&lt;Ingrediente&gt;" visibility="public"/>
+        <Method name="setIngredientes" returnType="void" visibility="public">
+          <Argument type="List&lt;Ingrediente&gt;" name="receitas"/>
+        </Method>
+        <Method name="adicionarIngrediente" returnType="void" visibility="public">
+          <Argument type="Ingrediente" name="i"/>
+        </Method>
+        <Method name="preparar" returnType="Receita" visibility="public">
+          <Argument type="Estoque" name="estoque"/>
+        </Method>
+        <Method name="insert" returnType="void" visibility="public">
+          <Argument type="int" name="ident"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Ingrediente" package="Model" visibility="public" xPosition="586.0" yPosition="376.0">
+      <Fields>
+        <Field name="id" type="int" visibility="public"/>
+        <Field name="nome" type="String" visibility="public"/>
+        <Field name="quantidade" type="int" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="id"/>
+          <Argument type="String" name="nome"/>
+          <Argument type="int" name="quantidade"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getNome" returnType="String" visibility="public"/>
+        <Method name="setNome" returnType="void" visibility="public">
+          <Argument type="String" name="nome"/>
+        </Method>
+        <Method name="getQuantidade" returnType="int" visibility="public"/>
+        <Method name="setQuantidade" returnType="void" visibility="public">
+          <Argument type="int" name="quantidade"/>
+        </Method>
+        <Method name="insert" returnType="boolean" visibility="public"/>
+        <Method name="getAll" returnType="List&lt;Ingrediente&gt;" visibility="public" isStatic="true"/>
+        <Method name="update" returnType="boolean" visibility="public"/>
+        <Method name="remove" returnType="boolean" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Prato" package="Model" visibility="public" isAbstract="true" xPosition="706.0" yPosition="1369.0">
+      <Fields>
+        <Field name="nome" type="String" visibility="private"/>
+        <Field name="id" type="int" visibility="private"/>
+        <Field name="r" type="Receita" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="nome"/>
+          <Argument type="int" name="id"/>
+          <Argument type="Receita" name="r"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getR" returnType="Receita" visibility="public"/>
+        <Method name="setR" returnType="void" visibility="public">
+          <Argument type="Receita" name="r"/>
+        </Method>
+        <Method name="getNome" returnType="String" visibility="public"/>
+        <Method name="setNome" returnType="void" visibility="public">
+          <Argument type="String" name="nome"/>
+        </Method>
+        <Method name="insert" returnType="void" visibility="public"/>
+        <Method name="getAll" returnType="List&lt;Receita&gt;" visibility="public" isStatic="true"/>
+        <Method name="remove" returnType="boolean" visibility="public"/>
+        <Method name="update" returnType="boolean" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Opcao" package="Model" visibility="public" xPosition="1357.0" yPosition="1369.0">
+      <Fields>
+        <Field name="pratos" type="List&lt;Prato&gt;" visibility="package"/>
+        <Field name="preco" type="float" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="float" name="preco"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getPratos" returnType="List&lt;Prato&gt;" visibility="public"/>
+        <Method name="setPratos" returnType="void" visibility="public">
+          <Argument type="List&lt;Prato&gt;" name="pratos"/>
+        </Method>
+        <Method name="getPreco" returnType="float" visibility="public"/>
+        <Method name="setPreco" returnType="void" visibility="public">
+          <Argument type="float" name="preco"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Refrigerante" package="Model" visibility="public" xPosition="2069.0" yPosition="662.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="insert" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="Estocavel" package="Model" visibility="public" xPosition="706.0" yPosition="1178.0">
+      <Methods/>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="Model.PratoCozinhavel" target="Model.Prato"/>
+    <UseRelation source="Model.Fornecedor" target="Model.Oferta" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Result.IngredientesxPratos" target="Model.Ingrediente" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Model.Prato" target="Model.Receita" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Model.Refrigerante" target="Model.PratoEstocavel"/>
+    <HasRelation name="receitas" source="Model.Receita" target="Model.Ingrediente" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Ingrediente&gt;"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Model.Ingrediente" target="Model.Estocavel"/>
+    <IsRelation name="is" source="Model.Cerveja" target="Model.PratoEstocavel"/>
+    <UseRelation source="Result.PratosXPedidos" target="Model.Pedido" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Model.Cardapio" target="Model.Opcao" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="forn" source="Result.ResultadoIngrxOferta" target="Model.Fornecedor" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="pratos" source="Model.Opcao" target="Model.Prato" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Prato&gt;"/>
+    <UseRelation source="Result.ResultadoPratos" target="Model.Ingrediente" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Model.Oferta" target="Model.Fornecedor" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Result.ResultadoIngrxOferta" target="Model.Fornecedor" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Model.Hamburguer" target="Model.PratoCozinhavel"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Model.PratoEstocavel" target="Model.Estocavel"/>
+    <IsRelation name="is" source="Model.PratoEstocavel" target="Model.Prato"/>
+    <HasRelation name="pra" source="Result.PratosXPedidos" target="Model.Prato" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Model.Oferta" target="Model.Oferta" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Model.Opcao" target="Model.Prato" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Model.Receita" target="Model.PratoCozinhavel"/>
+    <IsRelation name="is" source="Model.Acompanhamento" target="Model.PratoCozinhavel"/>
+    <HasRelation name="ingrediente" source="Result.IngredientesxPratos" target="Model.Ingrediente" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="ped" source="Result.PratosXPedidos" target="Model.Pedido" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="receita" source="Result.IngredientesxPratos" target="Model.Receita" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Result.ResultadoIngrxOferta" target="Model.Ingrediente" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="ofertas" source="Model.Fornecedor" target="Model.Oferta" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Oferta&gt;"/>
+    <HasRelation name="ofta" source="Result.ResultadoIngrxOferta" target="Model.Oferta" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Result.ResultadoPratos" target="Model.Prato" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Model.Oferta" target="Model.Ingrediente" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Model.Pedido" target="Model.Prato" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Model.Receita" target="Model.Ingrediente" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Result.ResultadoIngrxOferta" target="Model.Oferta" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Model.Receita" target="Model.Receita" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Result.PratosXPedidos" target="Model.Prato" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Model.Milkshake" target="Model.PratoCozinhavel"/>
+    <HasRelation name="ingr" source="Result.ResultadoIngrxOferta" target="Model.Ingrediente" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Result.ResultadoPratos" target="Model.Receita" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="r" source="Result.ResultadoPratos" target="Model.Receita" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Result.IngredientesxPratos" target="Model.Receita" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="ingrediente" source="Model.Oferta" target="Model.Ingrediente" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="pratos" source="Model.Pedido" target="Model.Prato" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Prato&gt;"/>
+    <HasRelation name="opcoes" source="Model.Cardapio" target="Model.Opcao" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Opcao&gt;"/>
+    <UseRelation source="Model.Fornecedor" target="Model.Fornecedor" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="r" source="Model.Prato" target="Model.Receita" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="hamburgueria.Estoque" target="hamburgueria.Estoque" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Model.Pedido" target="Model.Pedido" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Model.Ingrediente" target="Model.Ingrediente" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Model.Opcao" target="Model.Prato"/>
+    <HasRelation name="estocavel" source="hamburgueria.Estoque" target="hamburgueria.Estoque" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Estoque&gt;"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
